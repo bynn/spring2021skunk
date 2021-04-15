@@ -53,12 +53,16 @@ function useDraftTask({ addTask }) {
     await addTask(draftTask);
     setDraftTask(null);
   };
+  const roll = () => {
+    
+  }
   return {
     draftTask,
     createDraftTask,
     deleteDraftTask,
     setDraftTaskName,
     submitDraftTask,
+    roll,
   };
 }
 
@@ -74,6 +78,7 @@ function TaskList({ currentProject }) {
     deleteDraftTask,
     setDraftTaskName,
     submitDraftTask,
+    roll,
   } = useDraftTask({ addTask });
 
   return loading ? (
@@ -131,7 +136,7 @@ function TaskList({ currentProject }) {
         ) : (
           <ListItem>
             <Card>
-              <Button onClick={() => createDraftTask()}>Add Task</Button>
+              <Button onClick={() => roll()}>ROLLLLLLL</Button>
             </Card>
           </ListItem>
         )}
